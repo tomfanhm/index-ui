@@ -1,4 +1,189 @@
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.15; /* 1. Correct the line height in all browsers. */
+  -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+}
+
+/*
+Sections
+========
+*/
+body {
+  margin: 0; /* Remove the margin in all browsers. */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct font weight in Chrome and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  border-color: currentcolor;
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
 :root {
+  color-scheme: light;
   --z-bg: -1;
   --z-low: 1;
   --z-medium: 10;
@@ -32,7 +217,57 @@
   --radius: 1rem;
 }
 
-.dark {
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --background: 222.2 10% 10%;
+    --foreground: 222.2 0% 100%;
+    --card: 222.2 0% 10%;
+    --card-foreground: 222.2 0% 100%;
+    --popover: 222.2 10% 5%;
+    --popover-foreground: 222.2 0% 100%;
+    --primary: 222.2 84% 4.9%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222.2 10% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 184.2 10% 25%;
+    --muted-foreground: 222.2 0% 65%;
+    --accent: 184.2 10% 25%;
+    --accent-foreground: 222.2 0% 95%;
+    --destructive: 0 50% 50%;
+    --destructive-foreground: 222.2 0% 100%;
+    --border: 222.2 20% 50%;
+    --input: 222.2 20% 50%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 1rem;
+  }
+}
+[data-theme="light"] {
+  color-scheme: light;
+  --background: 222.2 0% 100%;
+  --foreground: 222.2 0% 10%;
+  --card: 222.2 0% 100%;
+  --card-foreground: 222.2 0% 15%;
+  --popover: 222.2 0% 100%;
+  --popover-foreground: 222.2 95% 10%;
+  --primary: 222.2 84% 4.9%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 222.2 10% 90%;
+  --secondary-foreground: 0 0% 0%;
+  --muted: 184.2 10% 95%;
+  --muted-foreground: 222.2 0% 40%;
+  --accent: 184.2 10% 90%;
+  --accent-foreground: 222.2 0% 15%;
+  --destructive: 0 50% 50%;
+  --destructive-foreground: 222.2 0% 100%;
+  --border: 222.2 20% 82%;
+  --input: 222.2 20% 50%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 1rem;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
   --background: 222.2 10% 10%;
   --foreground: 222.2 0% 100%;
   --card: 222.2 0% 10%;
@@ -55,41 +290,77 @@
   --radius: 1rem;
 }
 
-ui-accordion .accordion {
+.accordion {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-ui-accordion .accordion-content {
+
+.accordion-content {
   font-size: 0.75rem;
   line-height: 1rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height var(--t-fast) var(--ease-default);
 }
-ui-accordion .accordion-trigger {
+
+.accordion-trigger {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
   cursor: pointer;
 }
-ui-accordion .accordion-trigger:hover {
+.accordion-trigger:hover {
   text-decoration: underline;
 }
-ui-accordion .accordion-trigger > svg {
+.accordion-trigger > svg {
   width: 1.25rem;
   height: 1.25rem;
   fill: currentColor;
   transform: rotate(0deg);
   transition: transform var(--t-fast) var(--ease-default);
 }
-ui-accordion .accordion-item {
+
+.accordion-item {
   border-bottom: 1px solid hsl(var(--border));
 }
-ui-accordion .accordion-item.active .accordion-content {
+.accordion-item.active .accordion-content {
   max-height: 500px;
 }
-ui-accordion .accordion-item.active .accordion-trigger > svg {
+.accordion-item.active .accordion-trigger > svg {
   transform: rotate(180deg);
+}
+
+/* Base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: var(--radius);
+  border: none;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-weight: 600;
+  transition-duration: var(--t-fast);
+  transition-timing-function: var(--ease-default);
+  outline: none;
+  cursor: pointer;
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+.btn:hover {
+  background-color: hsl(var(--accent) / 0.7);
+}
+.btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn-outline {
+  border-color: currentColor;
+  background-color: transparent;
+  color: currentColor;
 } /*# sourceMappingURL=index.css.map */

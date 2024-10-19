@@ -1,0 +1,32 @@
+/* Base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: var(--radius);
+  border: none;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-weight: 600;
+  transition-duration: var(--t-fast);
+  transition-timing-function: var(--ease-default);
+  outline: none;
+  cursor: pointer;
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  &:hover {
+    background-color: hsl(var(--accent) / 0.7);
+  }
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.btn-outline {
+  border-color: currentColor;
+  background-color: transparent;
+  color: currentColor;
+}
