@@ -1,0 +1,54 @@
+.h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  @media (min-width: 1024px) {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.p {
+  line-height: 1.75rem;
+}
+
+.ul {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  & > li {
+    margin-top: 0.5rem;
+  }
+}
+
+.small {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.muted {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--muted-foreground);
+}
