@@ -1,0 +1,30 @@
+---
+import "../../../src/styles/index.css"
+
+interface Props {
+  title?: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style>
+    body {
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+    }
+</style>

@@ -35,7 +35,7 @@
   --input: 222.2 20% 50%;
   --ring: 222.2 84% 4.9%;
   // Border radius
-  --radius: 1rem;
+  --radius: 0.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,7 +60,7 @@
     --border: 222.2 20% 50%;
     --input: 222.2 20% 50%;
     --ring: 222.2 84% 4.9%;
-    --radius: 1rem;
+    --radius: 0.5rem;
   }
 }
 
@@ -85,7 +85,7 @@
   --border: 222.2 20% 82%;
   --input: 222.2 20% 50%;
   --ring: 222.2 84% 4.9%;
-  --radius: 1rem;
+  --radius: 0.5rem;
 }
 
 [data-theme="dark"] {
@@ -109,5 +109,5 @@
   --border: 222.2 20% 50%;
   --input: 222.2 20% 50%;
   --ring: 222.2 84% 4.9%;
-  --radius: 1rem;
+  --radius: 0.5rem;
 }
