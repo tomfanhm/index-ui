@@ -16,6 +16,7 @@ function resolve(str: string) {
 
 export default defineConfig({
   build: {
+    cssCodeSplit: false,
     lib: {
       entry: {
         index: resolve("./src/index.ts"),

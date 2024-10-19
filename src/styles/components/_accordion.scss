@@ -1,0 +1,45 @@
+ui-accordion {
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .accordion-content {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--t-fast) var(--ease-default);
+  }
+
+  .accordion-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+    & > svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      fill: currentColor;
+      transform: rotate(0deg);
+      transition: transform var(--t-fast) var(--ease-default);
+    }
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid hsl(var(--border));
+    &.active .accordion-content {
+      max-height: 500px;
+    }
+    &.active .accordion-trigger {
+      & > svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

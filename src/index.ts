@@ -1,1 +1,2 @@
-console.log("Hello, world!")
+import "./styles/index.css"
+export * from "./components/index"
